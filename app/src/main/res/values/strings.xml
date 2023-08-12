@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Happy Places</string>
+    <string name="app_welcome_message">Welcome To Happy Places!This app will help you explore the major cities in Kenya.You can find information
+    about popular tourists destinations, restaurants and fun activities. Just select a city and enjoy!!!
+    </string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="warning_text">Please sign in to continue</string>
+
+    <!--    list of counties-->
+    //Paces Name
+    <string name="place_1">Nairobi</string>
+    <string name="place_2">Nakuru</string>
+    <string name="place_3">Mombasa</string>
+    <string name="place_4">Kisumu</string>
+
+
+    //Nairobi Places Name
+    <string name="nairobi_place_3">Malls</string>
+    <string name="nairobi_place_2">Animal Park</string>
+    <string name="nairobi_place_1">Bomas of Kenya</string>
+    <string name="nairobi_place_4">Giraffe Center</string>
+
+    //Nairobi Place Details
+    <string name="nairobi_detail_1">At the centre of New Delhi stands the 42 m high India Gate, an "Arc-de-Triomphe" like archway in the middle of a crossroad. Almost similar to its French counterpart, it commemorates the 70,000 Indian soldiers who lost their lives fighting for the British Army during the World War I. The memorial bears the names of more than 13,516 British and Indian soldiers killed in the Northwestern Frontier in the Afghan war of 1919.</string>
+    <string name="nairobi_detail_2">An affluent neighbourhood in South Delhi, Hauz Khas has been well known since medieval times. Hauz Khas Village retains the old charm of the place with remnants of Islamic architecture roughly coloured by splotches of urbane refurbished upmarket. \'HKV\' is known for its electric nightlife with countless cafes, bars and pubs along with art galleries, and boutiques.</string>
+    <string name="nairobi_detail_3">At a height of 234 feet, this minaret is the tallest individual tower in the world and is a perfect display of Mughal architectural brilliance.</string>
+    <string name="nairobi_detail_4">Apart from being known for its stunning architecture, this is the first garden-tomb on the Indian subcontinent. It is a UNESCO World Heritage Site declared in 1993, and has undergone widespread restoration work since then. The tomb was custom-built by Humayun\'s son Akbar during 1569-70, and is also the first structure to have made the use of red sandstone at a massive scale.</string>
+
+    //Nakuru Places Name
+    <string name="nakuru_place_1">Victoria Memorial</string>
+    <string name="nakuru_place_2">Fort William</string>
+    <string name="nakuru_place_3">Belur Math</string>
+    <string name="nakuru_place_4">Howrah Bridge</string>
+
+    //Nakuru Places Details
+    <string name="nakuru_detail_1">The Victoria Memorial is a large marble building, which is considered to be the pride of Kolkata. Built between 1906 and 1921, it is dedicated to the memory of Queen Victoria. Now, it is a museum and a popular tourist spot under the Ministry of Culture.</string>
+    <string name="nakuru_detail_2">Fort William is a fort built in Kolkata on the eastern banks of the River Hooghly, the major distributary of Ganges, during the early years of the Bengal Presidency in the British India. It was named after King William III of England and Ireland and King William II of Scotland. The Maidan, which used to be a part of the Fort and is the largest urban park in Calcutta stands in front of the Fort.</string>
+    <string name="nakuru_detail_3">Belur Math is the headquarters of the Ramakrishna Math and Mission, founded by Swami Vivekananda, the chief disciple of Ramakrishna Paramahamsa. It is situated on the west bank of Hooghly River, Belur, West Bengal, India. It is one of the noteworthy establishments in Kolkata. This temple is the focus of the Ramakrishna Movement. The temple is prominent for its architecture that embraces Hindu, Christian and Islamic styles and stands as an icon of unity of all religions.</string>
+    <string name="nakuru_detail_4">Located over the Hooghly river in West Bengal, Howrah Bridge or the Rabindra Setu is the main connection between Howrah and Kolkata. It is a cantilever bridge and is regarded as one of the busiest ones among them.</string>
+
+    //Mombasa Places Name
+    <string name="mombasa_place_1">Marine Drive</string>
+    <string name="mombasa_place_2">Gateway of India</string>
+
+
+    //Mombasa Places Details
+    <string name="mombasa_detail_1">Starting from the north of Nariman Point and ending at the famous Chowpatty beach, the Marine Drive is a 3km long arc shaped road along the sea coast of South Mumbai. The coast lines the Arabian sea and is the best place to watch the sunset in Mumbai.</string>
+    <string name="mombasa_detail_2">One of the most distinguished monument in Mumbai, The Gateway of India was built in 1924. Now it has become a popular tourist hub in the city. Located at Apollo Bunder Waterfront, the monument overlooks the Arabian Sea in the most beautiful way.</string>
+
+    //Kisumu Places Name
+    <string name="kisumu_place_1">Fort Aguada</string>
+    <string name="kisumu_place_2">Calangute Beach</string>
+
+    //Kisumu Places Details
+    <string name="kisumu_detail_1">Fort Aguada is a 17th-century Portuguese fort looking out at the confluence of Mandovi River and the Arabian Sea. The crumbling ramparts of the fort stand on the Sinquerim Beach, approximately 18 km from Panjim. The highlight of the fort is a lone four-storey lighthouse (which is one-of-its-kind in Asia) and a stunning view of the sunset.</string>
+    <string name="kisumu_detail_2">Calangute is a largest beach in north Goa stretching from Candolim to Baga. Due to its sheer size and popularity, it is a hub for tourists and backpackers from all over the world. It is the perfect place to look for accommodation as it keeps you well-connected to the other beaches in the north. You can also sample the sumptuous culinary fare at an array of shacks here and embark on a number of water sports at the beach.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="username">Username</string>
+    <string name="confirm">Confirm</string>
+    <string name="enter_password">Enter password</string>
+    <string name="password">Password</string>
+    <string name="course">Course</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="email_address">Email Address</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_name">Enter name</string>
+    <string name="name">Name</string>
+    <string name="happy_places">Happy Places</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter email</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_have_an_account">Already have an account?</string>
+
+    <array name="CountryOfOrigin">
+        <item>Item 1</item>
+        <item>Item 1</item>
+        <item>Item 1</item>
+        <item>Item 1</item>
+    </array>
+
+</resources>

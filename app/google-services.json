@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "770071471588",
+    "project_id": "happy-places-538e7",
+    "storage_bucket": "happy-places-538e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770071471588:android:72f800933e17dc216113f1",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770071471588-qhc8vfi8npk65kl4c8taoq0625l0kv43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkuLfQWKACt2iXMetzlRo3GDLeVWUgUSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770071471588-qhc8vfi8npk65kl4c8taoq0625l0kv43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
