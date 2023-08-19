@@ -20,32 +20,39 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
 
+    SignUpActivity binding;
+    String Name ,Username, Email, Password;
+    FirebaseAuth mAuth;
+    FirebaseDatabase db;
+    DatabaseReference reference;
 
     Button button;
     Button buttonRegister;
 
-    EditText editTextEmail, editTextPassword;
+    EditText editTextEmail, editTextPassword, editTextName, editTextUsername;
 
     TextView textView;
 
     ProgressBar progressBar;
 
-    FirebaseAuth mAuth;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            Intent intent = new Intent(getApplicationContext(),MainPageActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    }
+
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if(currentUser != null){
+//            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,8 +60,10 @@ public class SignUpActivity extends AppCompatActivity {
 //        button = findViewById(id.confirmButton);
         mAuth = FirebaseAuth.getInstance();
 //        progressBar= findViewById(R.id.progressBar);
-        editTextEmail = findViewById(id.email);
+        editTextName = findViewById(id.name);
         editTextPassword = findViewById(id.password);
+        editTextUsername = findViewById(id.uname);
+        editTextEmail= findViewById(id.email);
         textView = findViewById(id.loginNow);
         buttonRegister =  findViewById(id.confirmButton);
 
@@ -91,9 +100,30 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (progressBar != null) {
                 progressBar.setVisibility(View.VISIBLE); }
-                String email, password;
+
+               String name, username, email, password;
+
+                name = String.valueOf(editTextName.getText().toString());
+                username = String.valueOf(editTextUsername.getText().toString());
                 email = String.valueOf(editTextEmail.getText().toString());
                 password= String.valueOf(editTextPassword.getText().toString());
+
+                if(!name.isEmpty() && !username.isEmpty() && !email.isEmpty() && !password.isEmpty())
+                {
+                    Users users = new Users(name,username, email, password );
+                    db = FirebaseDatabase.getInstance();
+                    reference = db.getReference("Users");
+                    reference.child(username).setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            editTextName.setText("");
+                            editTextUsername.setText("");
+                            editTextEmail.setText("");
+                            editTextPassword.setText("");
+
+                        }
+                    });
+                }
 
                 if(TextUtils.isEmpty(email)){
 
@@ -109,14 +139,14 @@ public class SignUpActivity extends AppCompatActivity {
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressBar.setVisibility(View.GONE);
+//                                progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
 
                                     Toast.makeText(SignUpActivity.this, "Account created.",
                                             Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(), MainPageActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), AfterLoginActivity.class);
                                     startActivity(intent);
-//                                    finish();
+                                    finish();
 
                                 } else {
                                     // If sign in fails, display a message to the user.

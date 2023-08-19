@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 //Start Login activity
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 //Start Signup activity
                 Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
