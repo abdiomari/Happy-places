@@ -24,9 +24,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
+//    handles account creation and user registration
 
-    SignUpActivity binding;
-    String Name ,Username, Email, Password;
+//    SignUpActivity binding;
+//    String Name ,Username, Email, Password;
     FirebaseAuth mAuth;
     FirebaseDatabase db;
     DatabaseReference reference;
@@ -77,24 +78,6 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +90,7 @@ public class SignUpActivity extends AppCompatActivity {
                 username = String.valueOf(editTextUsername.getText().toString());
                 email = String.valueOf(editTextEmail.getText().toString());
                 password= String.valueOf(editTextPassword.getText().toString());
-
+//upload user data to firebase after checking that all data is filled in
                 if(!name.isEmpty() && !username.isEmpty() && !email.isEmpty() && !password.isEmpty())
                 {
                     Users users = new Users(name,username, email, password );
@@ -124,7 +107,7 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     });
                 }
-
+//confirm email and password are entered
                 if(TextUtils.isEmpty(email)){
 
                     Toast.makeText(SignUpActivity.this, "Enter Email", Toast.LENGTH_SHORT).show();
@@ -140,6 +123,7 @@ public class SignUpActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
 //                                progressBar.setVisibility(View.GONE);
+                                // If sign in succeeds, display a message to the user.
                                 if (task.isSuccessful()) {
 
                                     Toast.makeText(SignUpActivity.this, "Account created.",

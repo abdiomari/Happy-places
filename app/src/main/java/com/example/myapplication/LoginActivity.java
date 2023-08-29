@@ -19,7 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
-
+//handles login logic and authorisation
+//    associates with activity_login.xml
     Button button;
 
     Button buttonLogin;
@@ -48,11 +49,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-//        progressBar= findViewById(R.id.progressBar);
         buttonLogin = findViewById(R.id.loginButton);
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
 
+//      navigation to SignUpActivity in case of new user
         button = findViewById(R.id.signupButton);
         button.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext() ,SignUpActivity.class);
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
             finish();
 
         });
-
+//logic to handle signing in with email and password
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
            public void onClick(View view){
@@ -70,17 +71,22 @@ public class LoginActivity extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText().toString());
                 password = String.valueOf(editTextPassword.getText().toString());
 
+
+//check if input is empty and throw an error message
                 if(TextUtils.isEmpty(email)){
-                    Toast.makeText(LoginActivity.this, "Enter Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Enter Email",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(TextUtils.isEmpty(password)){
-                    Toast.makeText(LoginActivity.this, "Enter password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Enter password",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+//                        checks for successfull sign in and redirects to AfterLoginActivity
                         if (progressBar != null) {
                         progressBar.setVisibility(View.GONE);}
                         if (task.isSuccessful()) {

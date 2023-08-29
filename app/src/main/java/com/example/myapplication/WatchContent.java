@@ -16,7 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class WatchContent extends AppCompatActivity {
-
+//Activity  enables the user to view data posted by different users(Places and description only)
     RecyclerView recyclerView;
     DatabaseReference database;
     MyAdapter myAdapter;
@@ -37,7 +37,7 @@ public class WatchContent extends AppCompatActivity {
         database = FirebaseDatabase.getInstance().getReference("Data");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+//data displayed using recycler view to give infinity scrolling effect
         list = new ArrayList<>();
         myAdapter = new MyAdapter(this,list);
         recyclerView.setAdapter(myAdapter);

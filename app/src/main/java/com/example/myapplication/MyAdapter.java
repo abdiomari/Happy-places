@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
         this.list = list;
     }
 
+    public MyAdapter(ArrayList<DataClass> dataList, OpenGalleryActivity openGalleryActivity) {
+
+    }
+
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,6 +39,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
         Data data = list.get(position);
         holder.title.setText(data.getTitle());
         holder.description.setText(data.getDescription());
+//      Glide.with(holder.itemView.getContext()).load(data.getImageUri()).into(holder.imageView);
+
     }
 
     @Override
@@ -44,12 +51,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView title, description;
+//        ImageView imageView;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
 
           title = itemView.findViewById(R.id.titleTextView);
           description = itemView.findViewById(R.id.descriptionTextView);
+//          imageView = itemView.findViewById(R.id.imageView);
+
         }
     }
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Happy Places</string>
-    <string name="app_welcome_message">Welcome To Happy Places!This app will help you explore the major cities in Kenya.You can find information
-    about popular tourists destinations, restaurants and fun activities. Just select a city and enjoy!!!
+    <string name="app_welcome_message">
+Welcome to Happy Places! This app wil help you explore destinations in Kenya. You can find information about popular tourists destinations, restaurants and fun activities. Just a city and enjoy!!!
     </string>
     <string name="sign_up">Sign up</string>
     <string name="sign_in">Sign in</string>
@@ -32,7 +32,8 @@
     <string name="create_account">Create Account</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="see_more">See more</string>
-    <string name="discover_content">Discover content</string>
+    <string name="discover_content">Read content</string>
+    <string name="View_images">Open Gallery</string>
     <string name="create_content">Create content</string>
     <string name="image_upload">Image_upload</string>
     <string name="provide_a_description_of_the_place">Please provide a description of the place?</string>
@@ -44,6 +45,9 @@
     <string name="descriibe_the_place">Describe the place</string>
     <string name="post">Post</string>
     <string name="back">BACK</string>
-
+    <string name="update">Update</string>
+    <string name="add_image">add image</string>
+    <string name="add_a_caption">Add a caption...</string>
+    <string name="upload_image">upload image</string>
 
 </resources>

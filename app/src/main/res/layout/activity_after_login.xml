@@ -17,16 +17,14 @@
         android:layout_centerInParent="true"
         >
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/back_arrow"
-            android:text="@string/back"
-            android:textSize="26sp"
-            android:layout_marginBottom="20sp"
-            android:padding="10sp"
-            />
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/lavender"
+            android:tint = "@color/white"
+            android:src="@drawable/back_arrow" />
 
 
         <Button
@@ -37,7 +35,11 @@
             android:textSize="26sp"
             android:gravity="center"
             android:layout_marginBottom="20sp"
-            android:padding="10sp"
+            android:padding="15sp"
+            android:tint = "@color/white"
+            android:background="@drawable/lavender_border"
+            android:backgroundTint="@color/lavender"
+
             />
 
         <Button
@@ -48,44 +50,26 @@
             android:textSize="24sp"
             android:gravity="center"
             android:layout_marginBottom="20sp"
-            android:padding="10sp"
+            android:padding="15sp"
+            android:background="@drawable/lavender_border"
+            android:backgroundTint="@color/lavender"
+            />
+
+        <Button
+            android:id="@+id/view_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/View_images"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginBottom="20sp"
+            android:padding="15sp"
+            android:background="@drawable/lavender_border"
+            android:backgroundTint="@color/lavender"
             />
 
     </LinearLayout>
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:src="@drawable/nairobi_national_park_6"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginEnd="16dp"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/titleTextView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_toEndOf="@id/imageView"-->
-<!--        android:text="@string/app_name"-->
-<!--        android:textStyle="bold"-->
-<!--        android:textSize="18sp"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/descriptionTextView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/app_welcome_message"-->
-<!--        android:layout_below="@id/titleTextView"-->
-<!--        android:layout_toEndOf="@id/imageView"/>-->
-
-<!--    <Button-->
-<!--        android:id="@+id/expandButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/descriptionTextView"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:text="@string/expand"/>-->
 
 </RelativeLayout>

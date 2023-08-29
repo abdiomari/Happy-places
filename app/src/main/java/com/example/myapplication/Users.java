@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
 public class Users {
-
+//Collect data of users  who are signing up
     String Name, Username, Email, Password;
 
     public Users() {

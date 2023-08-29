@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 public class SplashScreenActivity extends AppCompatActivity {
-
+//splash screen when launching the app for a brief 1.5seconds
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
